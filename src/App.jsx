@@ -1,8 +1,14 @@
+import NavBar from "./components/NavBar.jsx";
+import ClickMeBtn from "./components/ClickMeButton.jsx";
+import LeaderBoard from "./components/LeaderBoard.jsx";
+
 function App() {
   return (
-    <div>
-      <h1>Hello World.</h1>
-    </div>
+    <>
+      <NavBar />
+      <ClickMeBtn />
+      <LeaderBoard />
+    </>
   );
 }
 
