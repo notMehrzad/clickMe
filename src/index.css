@@ -1,90 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Jockey+One&display=swap");
+
 :root {
-    --beige: #BCAF9C;
-    --dark-brown: #33261D;
-    --light-brown: #7D7061;
+  --beige: #bcaf9c;
+  --dark-brown: #33261d;
+  --light-brown: #7d7061;
 }
 
-#root {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+* {
+  font-family: "Jockey One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: var(--beige);
-    font-family: "Jockey One";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--beige);
+  overflow: hidden;
 }
 
 nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 40px;
-    padding: 16px 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 30px;
+  height: 50px;
+  gap: 40px;
+  padding: 16px 30px;
 }
 
-.NavBarLink {
-    font-size: 15px;
-    color: var(--dark-brown);
+nav .link {
+  text-decoration: none;
+  font-size: 15px;
+  color: var(--dark-brown);
 }
 
-
-#clickMeButtonContainer {
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    top: 50%;
-    bottom: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+nav .link:hover {
+  border-bottom: 2px solid var(--dark-brown);
 }
 
-button {
-    background-color: var(--dark-brown);
-    color: var(--beige);
-    font-family: "Jockey One";
-    font-size: 64px;
-    width: 340px;
-    border-radius: 9px;
+.clickMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#count {
-    color: var(--dark-brown);
-    font-size: 32px;
-    width: 200px;
-    text-align: center;
-    margin: 0;
+.clickMe button {
+  background-color: var(--dark-brown);
+  color: var(--beige);
+  font-size: 64px;
+  width: 340px;
+  border-radius: 9px;
+  box-shadow: 7px 11px 16px 2px rgba(0, 0, 0, 0.25);
 }
 
-#LeaderBoard {
-    position: absolute;
-    left: 0.5rem;
-    bottom: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    align-items: center;
-    gap: 10px;
-    background-color: var(--light-brown);
-    width: 285px;
-    height: 369px;
-    border-radius: 9px;
-    border: 2px solid black;
-    color: var(--beige);
-    font-size: 15px;
+.clickMe span {
+  font-size: 32px;
+  color: var(--dark-brown);
 }
 
-#LeaderBoardTitle {
-    font-size: 24px;
-    margin: 0;
+.leader-board {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  background-color: var(--light-brown);
+  width: 285px;
+  height: 369px;
+  border: 2px solid black;
+  border-radius: 9px;
+  box-shadow: 7px 11px 16px 2px rgba(0, 0, 0, 0.25);
+  margin: 16px 30px;
+}
+
+.leader-board .title {
+  font-size: 24px;
+  color: var(--beige);
+}
+
+.leader-board .player-status {
+  background-color: var(--beige);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.player-status .name {
+  font-size: 15px;
+  color: var(--dark-brown);
+}
+
+.player-status .click-count {
+  font-size: 15px;
+  color: var(--dark-brown);
+}
+
+.player-status .rank {
+  font-size: 15px;
+  color: var(--dark-brown);
 }

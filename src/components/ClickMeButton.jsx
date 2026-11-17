@@ -4,9 +4,9 @@ function ClickMeBtn() {
   const [count, setCount] = useState(0);
 
   return (
-    <div id="clickMeButtonContainer">
+    <div className="clickMe">
       <button onClick={() => setCount((c) => c + 1)}>click Me</button>
-      <p id="count">count: {count}</p>
+      <span>count: {count}</span>
     </div>
   );
 }
